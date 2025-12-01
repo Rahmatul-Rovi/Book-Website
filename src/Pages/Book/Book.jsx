@@ -1,12 +1,14 @@
 import React, { use } from 'react';
 import { FaRegStarHalfStroke } from "react-icons/fa6";
+import { Link } from 'react-router';
 
 const Book = ({singleBook}) => {
     // const data = use(bookPromise);
     // console.log(data);
-    const {bookName, author, image, rating, category, tags, yearOfPublishing, publisher} = singleBook;
+    const {bookName, bookId ,author, image, rating, category, tags, yearOfPublishing, publisher} = singleBook;
     return (
-       <div className="card bg-base-100 w-96 shadow-sm border p-6 shadow">
+    <Link to={`/bookDetails/${bookId}`}>
+           <div className="card bg-base-100 w-96 shadow-sm border p-6 shadow">
   <figure className='p-4 bg-gray-100 w-2/3 mx-auto'>
     <img
     className='h-[166px]'
@@ -34,6 +36,7 @@ const Book = ({singleBook}) => {
     </div>
   </div>
 </div>
+    </Link>
     );
 };
 
