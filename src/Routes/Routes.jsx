@@ -7,6 +7,8 @@ import Home from '../Pages/Home/Home';
 import About from '../Pages/About/About';
 import BookDetails from '../Pages/BookDetails/BookDetails.JSX';
 import ReadList from '../Pages/ReadList/ReadList';
+import Login from '../Components/Login/Login';
+import Register from '../Components/Register/Register';
 
 
 
@@ -21,6 +23,14 @@ export const router = createBrowserRouter([
             loader: () => fetch('booksData.json'),
             path: '/',
             Component: Home
+        },
+        {
+         path: '/login',
+         Component: Login
+        },
+        {
+          path:'/register',
+          Component: Register
         },
         {
           path:'/about',

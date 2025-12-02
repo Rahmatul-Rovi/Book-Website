@@ -14,10 +14,10 @@ const Books = ({data}) => {
 
     //const bookPromise = fetch('./booksData.json').then(res=> res.json())
     return (
-        <div id='books-section'>
-            <h1 className='text-3xl text-center p-6 font-bold'>Books</h1>
+        <div id='books-section' className=' bg-blue-100'>
+            <h1 className='text-3xl text-center p-6 font-bold bg-blue-200'>Books</h1>
             <Suspense fallback={<span>Loading....</span>}>
-          <div className='grid grid-cols-1 md:grid grid-cols-2 lg:grid grid-cols-3 gap-5'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 bg-blue-200'>
              {
             data.map((singleBook) => <Book key={singleBook.bookId} singleBook={singleBook}></Book> )
            }

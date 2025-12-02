@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router';
 
 const Navbar = () => {
+  const[isLoggedIn, setIsLoggedIn] = useState(false);
     const links = <>
        <Link to='/'> <li className='m-2'>Home</li></Link>
        <Link to='/about'> <li className='m-2'>About</li></Link>
        <Link to='/readList'> <li className='m-2'>ReadList</li></Link>
     </>
     return (
-       <div className="navbar bg-base-100 shadow-sm">
+       <div className="navbar bg-base-100 shadow-sm bg-blue-200">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -27,8 +28,19 @@ const Navbar = () => {
        {links}
     </ul>
   </div>
-  <div className="navbar-end">
-    <a className="btn">Button</a>
+ <div className="navbar-end">
+    {isLoggedIn ? (
+        <>
+            <a className="btn btn-ghost">Hello, User!</a> 
+            <Link to="/logout" className="btn btn-warning">Logout</Link>
+        </>
+    ) : (
+        <>
+            <Link to="/login" className="btn btn-secondary">Login</Link>
+            
+            <Link to="/register" className="btn btn-primary">Register</Link>
+        </>
+    )}
   </div>
 </div>
     );

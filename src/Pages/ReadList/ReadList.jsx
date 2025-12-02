@@ -30,7 +30,7 @@ const ReadList = () => {
       }
     }
     return (
-        <div>
+        <div className='bg-blue-100'>
         <details className="dropdown">
   <summary className="btn m-1">Sort by: {sort?sort:'' }</summary>
   <ul className="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">

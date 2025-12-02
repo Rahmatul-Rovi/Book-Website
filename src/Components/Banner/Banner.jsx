@@ -16,7 +16,7 @@ const Banner = () => {
         }
     };
     return (
-        <div className="hero bg-base-200 min-h-screen">
+        <div className="hero bg-blue-100 min-h-screen ">
   <div className="hero-content flex-col lg:flex-row-reverse">
     <img
       src={bookimage}
@@ -27,7 +27,7 @@ const Banner = () => {
       <p className="py-6">
       Step beyond the conventional reading experience and immerse yourself in the vibrant, unfolding tapestry of the literary world. We invite you to dive deep into our curated collection, featuring meticulous analyses of the latest and most anticipated book releases across every compelling genre.
       </p>
-      <button  className="btn btn-primary" onClick={handleViewListClick}>View the list</button>
+      <button  className="btn btn-primary" onClick={handleViewListClick}>View Book list</button>
     </div>
   </div>
 </div>
