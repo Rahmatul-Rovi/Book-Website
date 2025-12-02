@@ -5,23 +5,23 @@ import Book from '../../Pages/Book/Book';
 
 const Banner = () => {
   const handleViewListClick = () => {
-        // ধাপ ১-এ সেট করা ID ('books-section') দিয়ে এলিমেন্টটিকে খুঁজছি
+      
         const targetSection = document.getElementById('books-section'); 
         
         if (targetSection) {
-            // targetSection খুঁজে পেলে, সেখানে স্ক্রল করার নির্দেশ দিচ্ছি
             targetSection.scrollIntoView({ 
-                behavior: 'smooth' // 'smooth' ব্যবহার করলে পাতাটি ধীরে ধীরে যাবে, যা দেখতে ভালো লাগবে।
+                behavior: 'smooth' 
             });
         }
     };
     return (
         <div className="hero bg-blue-100 min-h-screen ">
   <div className="hero-content flex-col lg:flex-row-reverse">
-    <img
-      src={bookimage}
-      className="max-w-sm rounded-lg shadow-2xl"
-    />
+   <img
+  src={bookimage}
+  // ✅ 3D Look Classes Added: rotate, translate, and a strong shadow
+  className="max-w-sm rounded-lg shadow-2xl transition-all duration-500 hover:rotate-1 hover:translate-y-[-4px] hover:shadow-cyan-500/50 hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
+/>
     <div>
       <h1 className="text-5xl font-bold">Explore the World of Books</h1>
       <p className="py-6">

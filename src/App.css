@@ -1,0 +1,27 @@
+/* ======================================= */
+/* 1. Default (Light Mode) Variables */
+/* ======================================= */
+:root { /* Light Mode er values */
+  --primary-color: #007bff;
+  --text-color: #333333;
+  --background-color: #ffffff;
+}
+
+/* ======================================= */
+/* 2. Dark Mode Class-based Overrides */
+/* ======================================= */
+.dark-mode { /* Jehetu amra body te class add korchi */
+  --primary-color: #66b5ff;
+  --text-color: #e0e0e0;
+  --background-color: #1a1a1a;
+}
+
+/* ======================================= */
+/* 3. Global Styles */
+/* ======================================= */
+body {
+  /* Body e byabohar korar somoy .dark-mode class-er values override hobe */
+  background-color: var(--background-color); 
+  color: var(--text-color);
+  /* Baki CSS thik thakbe */
+}
